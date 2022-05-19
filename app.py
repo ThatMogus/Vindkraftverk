@@ -13,7 +13,6 @@ def greenCallback(value):
             return
         l1.write(0)
         l2.write(1)
-        print(colored("[DEBUG] [SUCCESS] Green button pressed, motor turned on.", "green"))
         open("prev.txt", "w").write("green")
 def redCallback(value):
     if not value:
@@ -21,7 +20,6 @@ def redCallback(value):
             return
         l1.write(1)
         l2.write(0)
-        print(colored("[DEBUG] [SUCCESS] Red button pressed, motor turned off.", "green"))
         open("prev.txt", "w").write("red")
 port = Arduino.AUTODETECT
 board = Arduino(port)
